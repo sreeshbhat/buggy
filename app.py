@@ -19,7 +19,7 @@ def index():
         role = request.form["role"]
 
         path = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
-        file.save(path)
+        file.save(role)
 
         text = extract_text(path)
         skills = extract_skills(text)
